@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-title {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .tags {
+            font-size: 0.85em;
+            color: #666;
+            font-style: italic;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Project Portfolio</h1>
+    <p>Hi, I'm [Your Name]. Here are some of the projects I've worked on.</p>
+</header>
+
+<section id="projects">
+    <div class="project-card">
+        <h2 class="project-title">Project Name One</h2>
+        <p class="tags">Technologies: HTML, CSS, JavaScript</p>
+        <p>A brief description of what this project does and the problem it solves. Keep it punchy!</p>
+        <a href="https://github.com/yourusername/project1" class="btn" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2 class="project-title">Project Name Two</h2>
+        <p class="tags">Technologies: Python, Flask, SQL</p>
+        <p>Describe your role in this project. What was the most challenging part you handled?</p>
+        <a href="https://github.com/yourusername/project2" class="btn" target="_blank">View Project</a>
+    </div>
+</section>
+
+<footer>
+    <p style="text-align: center; margin-top: 50px;">
+        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> | 
+        <a href="mailto:your@email.com">Contact Me</a>
+    </p>
+</footer>
+
+</body>
+</html>
