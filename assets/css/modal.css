@@ -1,0 +1,326 @@
+﻿/* Basic modal styles */
+.modal
+
+{
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 1200;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(12,12,12,0.55);
+}
+
+/* panel */
+.modal-panel {
+    position: relative;
+    width: min(92vw, 720px);
+    max-height: 86vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 12px 40px rgba(10,10,10,0.18);
+}
+
+/* close button */
+.modal-close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.25rem;
+    background: transparent;
+    border: 0;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* description & links */
+#modal-desc {
+    margin: 0.6rem 0 1rem;
+    color: #222;
+}
+
+.modal-links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* small screens tweaks */
+@media (max-width: 520px) {
+    .modal-panel {
+        padding: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .modal-close {
+        right: 0.35rem;
+        top: 0.2rem;
+    }
+}
+/* Basic modal styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 1200;
+}
+
+    .modal[hidden] {
+        display: none;
+    }
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(12,12,12,0.55);
+}
+
+/* panel */
+.modal-panel {
+    position: relative;
+    width: min(92vw, 920px);
+    max-height: 86vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 12px 40px rgba(10,10,10,0.18);
+}
+
+/* close button */
+.modal-close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.25rem;
+    background: transparent;
+    border: 0;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* header */
+.modal-panel header {
+    margin-bottom: 0.75rem;
+}
+
+/* modal body: split layout */
+.modal-body {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* left column (30%) */
+.modal-left {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+/* square icon container */
+.modal-icon {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* keep square */
+    background: #f4f4f4;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+    .modal-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+/* left buttons: vertical full-width buttons */
+.modal-left-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .modal-left-buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+/* thin divider */
+.modal-divider {
+    width: 1px;
+    background: #e0e0e0; /* thin grey bar */
+    align-self: stretch;
+}
+
+/* right column (70%) */
+.modal-right {
+    flex: 1 1 70%;
+    padding-right: 1rem;
+}
+
+/* description & links */
+.modal-desc {
+    margin-bottom: 1rem;
+    color: #222;
+    line-height: 1.45;
+}
+
+.modal-links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 720px) {
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .modal-divider {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+/* --- Add / replace these rules to increase spacing on the left and between columns --- */
+
+/* increase the overall column gap */
+.modal-body {
+    display: flex;
+    gap: 1.25rem; /* bigger gap between left, divider and right */
+    align-items: flex-start;
+}
+
+/* left column: give inner padding so icon/buttons don't touch the divider */
+.modal-left {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* more space between icon and buttons */
+    padding: 0.5rem 0.75rem 0.5rem 0.25rem; /* top right bottom left */
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+/* icon: add internal padding and margin below to separate from buttons */
+.modal-icon {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f4f4f4;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+    padding: 0.4rem; /* create breathing room inside icon box */
+    margin-bottom: 0.75rem; /* extra gap between icon and first button */
+}
+
+.modal-left-buttons .button {
+    display: inline-flex; /* flex so we can center content */
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    width: 100%;
+    padding: 0.6rem 0.8rem; /* comfortable tap target */
+    min-height: 44px; /* ensures consistent height */
+    box-sizing: border-box;
+    text-align: center; /* fallback for multi-line */
+    line-height: 1.2;
+}
+
+    /* If you use the 'small' modifier, increase its height slightly too */
+    .modal-left-buttons .button.small {
+        padding: 0.5rem 0.6rem;
+        min-height: 40px;
+    }
+
+/* Also ensure links created in modal-links use the same centering */
+.modal-links .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.7rem;
+    box-sizing: border-box;
+}
+
+/* Increase modal vertical space if height is too small */
+.modal-panel {
+    /* existing rules kept, add a minimum height and slightly larger max height */
+    min-height: 320px; /* raise if you want taller popup */
+    max-height: 88vh; /* allows more vertical space on tall screens */
+    width: min(94vw, 980px); /* slightly wider option if desired */
+}
+
+/* thin divider: add horizontal margin so it doesn't butt up against content */
+.modal-divider {
+    width: 1px;
+    background: #e0e0e0;
+    align-self: stretch;
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+}
+
+/* right column: add left padding so text doesn't touch the divider */
+.modal-right {
+    flex: 1 1 70%;
+    padding-left: 0.75rem;
+    box-sizing: border-box;
+}
+
+/* mobile: keep columns stacked but preserve spacing */
+@media (max-width: 720px) {
+    .modal-body {
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .modal-left {
+        padding: 0.4rem 0.25rem 0.2rem;
+    }
+
+    .modal-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0.5rem 0; /* vertical spacing when stacked */
+    }
+
+    .modal-right {
+        padding-left: 0.25rem;
+    }
+}
+
+#modal-desc {
+    text-align: justify; /* Options: left, center, right, justify */
+    line-height: 1.6; /* Adds better readability between lines */
+}
+#modal-desc b, 
+#modal-desc strong {
+    font-weight: 700 !important; /* '700' is standard bold; '!important' overrides template resets */
+    color: #444;                /* Optional: makes bold text slightly darker for contrast */
+}
+
